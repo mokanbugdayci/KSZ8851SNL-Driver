@@ -1,10 +1,9 @@
  /******************************************************************************
- * @filename	: 	ksz8851.h
+ * @filename	: 	ksz8851.c
  * @description : 	This file provides commands and functions to
  * 					communicate KSZ8851SNL ethernet controller.
  * @author      : 	M.Okan BUĞDAYCI
- * @author		: 	Mustafa KOCAOĞLU
- * @copyright   : 	Umbrella Inc.
+ * @copyright   : 	GNU licence.
  * @date        : 	01.05.2020
  * @revision	: 	v.1.0.0 - Driver files created
  ******************************************************************************/
