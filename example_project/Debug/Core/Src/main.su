@@ -1,0 +1,9 @@
+main.c:90:5:main	48	static
+main.c:203:6:SystemClock_Config	112	static
+main.c:243:9:mcu_UartExt_Write	40	static
+main.c:252:5:_write	40	static
+main.c:267:10:callback_ksz8851_GetTick	8	static
+main.c:272:9:callback_ksz8851_SPI_Transmit	48	static
+main.c:280:9:callback_ksz8851_SPI_TransmitReceive	56	static
+main.c:288:6:callback_ksz8851_GPIO_Control	16	static
+main.c:299:6:Error_Handler	8	static

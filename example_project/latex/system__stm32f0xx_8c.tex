@@ -1,0 +1,65 @@
+\hypertarget{system__stm32f0xx_8c}{}\doxysection{Core/\+Src/system\+\_\+stm32f0xx.c File Reference}
+\label{system__stm32f0xx_8c}\index{Core/Src/system\_stm32f0xx.c@{Core/Src/system\_stm32f0xx.c}}
+
+
+C\+M\+S\+IS Cortex-\/\+M0 Device Peripheral Access Layer System Source File.  
+
+
+{\ttfamily \#include \char`\"{}stm32f0xx.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___defines_gaeafcff4f57440c60e64812dddd13e7cb}{H\+S\+E\+\_\+\+V\+A\+L\+UE}}~((uint32\+\_\+t)8000000)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___defines_gaaa8c76e274d0f6dd2cefb5d0b17fbc37}{H\+S\+I\+\_\+\+V\+A\+L\+UE}}~((uint32\+\_\+t)8000000)
+\item 
+\#define \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___defines_ga47f01e5e3f2edfa94bf74c08835f3875}{H\+S\+I48\+\_\+\+V\+A\+L\+UE}}~((uint32\+\_\+t)48000000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Setup the microcontroller system. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update}} (void)
+\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable according to Clock Register Values. The System\+Core\+Clock variable contains the core clock (H\+C\+LK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t {\bfseries System\+Core\+Clock} = 8000000
+\item 
+const uint8\+\_\+t {\bfseries A\+H\+B\+Presc\+Table} \mbox{[}16\mbox{]} = \{0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 6, 7, 8, 9\}
+\item 
+const uint8\+\_\+t {\bfseries A\+P\+B\+Presc\+Table} \mbox{[}8\mbox{]} = \{0, 0, 0, 0, 1, 2, 3, 4\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+C\+M\+S\+IS Cortex-\/\+M0 Device Peripheral Access Layer System Source File. 
+
+\begin{DoxyAuthor}{Author}
+M\+CD Application Team
+\begin{DoxyEnumerate}
+\item This file provides two functions and one global variable to be called from user application\+:
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()}}\+: This function is called at startup just after reset and before branch to main program. This call is made inside the \char`\"{}startup\+\_\+stm32f0xx.\+s\char`\"{} file.
+\item System\+Core\+Clock variable\+: Contains the core clock (H\+C\+LK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters.
+\item \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update()}}\+: Updates the variable System\+Core\+Clock and must be called whenever the core clock is changed during program execution.
+\end{DoxyItemize}
+\item After each device reset the H\+SI (8 M\+Hz) is used as system clock source. Then \mbox{\hyperlink{group___s_t_m32_f0xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init()}} function is called, in \char`\"{}startup\+\_\+stm32f0xx.\+s\char`\"{} file, to configure the system clock before to branch to main program.
+\end{DoxyEnumerate}
+\end{DoxyAuthor}
+\hypertarget{system__stm32f0xx_8c_autotoc_md0}{}\doxysubsection{3. This file configures the system clock as follows\+:}\label{system__stm32f0xx_8c_autotoc_md0}
+\hypertarget{system__stm32f0xx_8c_autotoc_md1}{}\doxysubsubsection{Supported S\+T\+M32\+F0xx device}\label{system__stm32f0xx_8c_autotoc_md1}
+\hypertarget{system__stm32f0xx_8c_autotoc_md2}{}\doxysubsubsection{System Clock source                    $\vert$ H\+SI}\label{system__stm32f0xx_8c_autotoc_md2}
+\hypertarget{system__stm32f0xx_8c_autotoc_md3}{}\doxysubsubsection{S\+Y\+S\+C\+L\+K(\+Hz)                             $\vert$ 8000000}\label{system__stm32f0xx_8c_autotoc_md3}
+\hypertarget{system__stm32f0xx_8c_autotoc_md4}{}\doxysubsubsection{H\+C\+L\+K(\+Hz)                               $\vert$ 8000000}\label{system__stm32f0xx_8c_autotoc_md4}
+\hypertarget{system__stm32f0xx_8c_autotoc_md5}{}\doxysubsubsection{A\+H\+B Prescaler                          $\vert$ 1}\label{system__stm32f0xx_8c_autotoc_md5}
+\hypertarget{system__stm32f0xx_8c_autotoc_md6}{}\doxysubsubsection{A\+P\+B1 Prescaler                         $\vert$ 1}\label{system__stm32f0xx_8c_autotoc_md6}
+=============================================================================
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2016 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 

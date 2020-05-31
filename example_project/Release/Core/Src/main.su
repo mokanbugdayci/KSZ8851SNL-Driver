@@ -1,0 +1,9 @@
+main.c:245:9:callback_ksz8851_transmit	0	static
+main.c:251:9:callback_ksz8851_transmitReceive	0	static
+main.c:257:9:callback_ksz8851_gpioControl	0	static
+main.c:180:6:SystemClock_Config	112	static
+main.c:86:5:main	40	static
+main.c:220:9:mcu_UartExt_Write	24	static
+main.c:229:5:_write	8	static
+main.c:237:6:HAL_SPI_TxRxCpltCallback	16	static
+main.c:269:6:Error_Handler	0	static

@@ -1,0 +1,171 @@
+\hypertarget{main_8c}{}\doxysection{Core/\+Src/main.c File Reference}
+\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}spi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}usart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}ksz8851.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_afd5efeacdeae7a2c1c945f9dc64d9eb1}\label{main_8c_afd5efeacdeae7a2c1c945f9dc64d9eb1}} 
+\#define {\bfseries M\+C\+U\+\_\+\+U\+A\+R\+T\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}()~\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+U\+S\+A\+R\+T1\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE()
+\item 
+\mbox{\Hypertarget{main_8c_a6de301eb16a4527e322411ea861ee754}\label{main_8c_a6de301eb16a4527e322411ea861ee754}} 
+\#define {\bfseries M\+C\+U\+\_\+\+U\+A\+R\+T\+\_\+\+P\+O\+R\+T\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE}()~\+\_\+\+\_\+\+H\+A\+L\+\_\+\+R\+C\+C\+\_\+\+G\+P\+I\+O\+A\+\_\+\+C\+L\+K\+\_\+\+E\+N\+A\+B\+LE()
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_a75268b6a26ed53ca38a3342d82b9a235}\label{main_8c_a75268b6a26ed53ca38a3342d82b9a235}} 
+uint8\+\_\+t {\bfseries callback\+\_\+ksz8851\+\_\+transmit} (uint8\+\_\+t $\ast$p\+Tx\+Buffer, uint16\+\_\+t data\+Lenght)
+\item 
+\mbox{\Hypertarget{main_8c_ae37cacadb18e21f4204793d6d906b71c}\label{main_8c_ae37cacadb18e21f4204793d6d906b71c}} 
+uint8\+\_\+t {\bfseries callback\+\_\+ksz8851\+\_\+transmit\+Receive} (uint8\+\_\+t $\ast$p\+Tx\+Buffer, uint8\+\_\+t $\ast$p\+Rx\+Buffer, uint16\+\_\+t data\+Lenght)
+\item 
+\mbox{\Hypertarget{main_8c_a9391db3ad77e8c0e1105a980013ee2b8}\label{main_8c_a9391db3ad77e8c0e1105a980013ee2b8}} 
+uint8\+\_\+t {\bfseries callback\+\_\+ksz8851\+\_\+gpio\+Control} (uint32\+\_\+t port, uint16\+\_\+t pin, uint8\+\_\+t pin\+Status)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{main_8c_adbf0249c0e9766d2d87e8f90a599d810}\label{main_8c_adbf0249c0e9766d2d87e8f90a599d810}} 
+uint8\+\_\+t {\bfseries mcu\+\_\+\+Uart\+Ext\+\_\+\+Write} (uint8\+\_\+t $\ast$p\+Data, uint16\+\_\+t Size, uint32\+\_\+t Timeout)
+\item 
+\mbox{\Hypertarget{main_8c_a92830f7410339c4be8b469045686e10b}\label{main_8c_a92830f7410339c4be8b469045686e10b}} 
+int {\bfseries \+\_\+write} (int file, char $\ast$data, int len)
+\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a95cceaa201f44151f288a7429cf929b4}\label{main_8c_a95cceaa201f44151f288a7429cf929b4}} 
+uint16\+\_\+t {\bfseries ksz\+Reg\+Val} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a1cff46d2750546fc7fd09b54c44b2d7b}\label{main_8c_a1cff46d2750546fc7fd09b54c44b2d7b}} 
+uint16\+\_\+t {\bfseries M\+A\+C\+\_\+low} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a7989eb9de7ce61645b1a141574680701}\label{main_8c_a7989eb9de7ce61645b1a141574680701}} 
+uint16\+\_\+t {\bfseries M\+A\+C\+\_\+mid} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a503d362e45958fa447db14e35a401bba}\label{main_8c_a503d362e45958fa447db14e35a401bba}} 
+uint16\+\_\+t {\bfseries M\+A\+C\+\_\+high} = 0
+\item 
+\mbox{\Hypertarget{main_8c_ab72b3d18e804566601430d00c155e01c}\label{main_8c_ab72b3d18e804566601430d00c155e01c}} 
+uint8\+\_\+t {\bfseries spi\+\_\+buffer\+\_\+tx} \mbox{[}32\mbox{]} = \{0\}
+\item 
+\mbox{\Hypertarget{main_8c_a154d7fb2b9c91b9a228648bbcfd70334}\label{main_8c_a154d7fb2b9c91b9a228648bbcfd70334}} 
+uint8\+\_\+t {\bfseries spi\+\_\+buffer\+\_\+rx} \mbox{[}32\mbox{]} = \{0\}
+\item 
+\mbox{\Hypertarget{main_8c_ab7526ae61b76c8da6a7e6183b866a6b8}\label{main_8c_ab7526ae61b76c8da6a7e6183b866a6b8}} 
+uint8\+\_\+t {\bfseries uart\+\_\+buffer\+\_\+tx} \mbox{[}32\mbox{]} = \{0\}
+\item 
+\mbox{\Hypertarget{main_8c_a695074c732cf9c53cb7b484da28ae204}\label{main_8c_a695074c732cf9c53cb7b484da28ae204}} 
+uint8\+\_\+t {\bfseries spi\+\_\+return} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a79d7cf50415686b817931e0cba40f795}\label{main_8c_a79d7cf50415686b817931e0cba40f795}} 
+K\+S\+Z8851\+\_\+t {\bfseries ksz8851}
+\item 
+\mbox{\Hypertarget{main_8c_a906f546f0529eaa9b6601c4b12eb2418}\label{main_8c_a906f546f0529eaa9b6601c4b12eb2418}} 
+uint8\+\_\+t {\bfseries mac} \mbox{[}K\+S\+Z\+\_\+\+M\+A\+C\+\_\+\+A\+D\+D\+R\+R\+\_\+\+L\+EN\mbox{]} = \{0x01, 0x02, 0x03, 0x04, 0x05, 0x06\}
+\item 
+\mbox{\Hypertarget{main_8c_a8538600d4dcb133f4278c9f147bae293}\label{main_8c_a8538600d4dcb133f4278c9f147bae293}} 
+uint8\+\_\+t {\bfseries spi\+\_\+status1}
+\item 
+\mbox{\Hypertarget{main_8c_ae4487dd40da6f36d9c3f9b8d8e3bf1d6}\label{main_8c_ae4487dd40da6f36d9c3f9b8d8e3bf1d6}} 
+uint8\+\_\+t {\bfseries spi\+\_\+status2}
+\item 
+\mbox{\Hypertarget{main_8c_ab673442b7dbed90b74b1bb29897384d0}\label{main_8c_ab673442b7dbed90b74b1bb29897384d0}} 
+uint8\+\_\+t {\bfseries spi\+\_\+status3}
+\item 
+\mbox{\Hypertarget{main_8c_a0480b812cba9c1d9c71a5fb1071bd0fc}\label{main_8c_a0480b812cba9c1d9c71a5fb1071bd0fc}} 
+uint8\+\_\+t {\bfseries counter} = 0
+\item 
+K\+S\+Z8851\+\_\+\+Callbacks\+\_\+t {\bfseries callbacks}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) 2020 S\+T\+Microelectronics. All rights reserved.\end{center} }
+
+This software component is licensed by ST under B\+SD 3-\/Clause license, the \char`\"{}\+License\char`\"{}; You may not use this file except in compliance with the License. You may obtain a copy of the License at\+: opensource.\+org/licenses/\+B\+S\+D-\/3-\/\+Clause 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+Initializes the C\+PU, A\+HB and A\+PB busses clocks
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a2c4e1cec9b8cc4d5f41c2e0dff5f03cf}\label{main_8c_a2c4e1cec9b8cc4d5f41c2e0dff5f03cf}} 
+\index{main.c@{main.c}!callbacks@{callbacks}}
+\index{callbacks@{callbacks}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{callbacks}{callbacks}}
+{\footnotesize\ttfamily K\+S\+Z8851\+\_\+\+Callbacks\+\_\+t callbacks}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{callback\_ksz8851\_transmit,}
+\DoxyCodeLine{                                 callback\_ksz8851\_transmitReceive,}
+\DoxyCodeLine{                                 callback\_ksz8851\_gpioControl\}}
+
+\end{DoxyCode}
