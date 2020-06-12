@@ -41,8 +41,8 @@ SPI_Tutorial_Master.bin \
 all: SPI_Tutorial_Master.elf secondary-outputs
 
 # Tool invocations
-SPI_Tutorial_Master.elf: $(OBJS) $(USER_OBJS) C:\Users\MOB\Documents\F091_Training\SPI_Tutorial_Master\STM32F091RCTX_FLASH.ld
-	arm-none-eabi-gcc -o "SPI_Tutorial_Master.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\MOB\Documents\F091_Training\SPI_Tutorial_Master\STM32F091RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Tutorial_Master.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SPI_Tutorial_Master.elf: $(OBJS) $(USER_OBJS) H:\MOB\GitHub\KSZ8851SNL-Driver\example_project\STM32F091RCTX_FLASH.ld
+	arm-none-eabi-gcc -o "SPI_Tutorial_Master.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"H:\MOB\GitHub\KSZ8851SNL-Driver\example_project\STM32F091RCTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Tutorial_Master.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

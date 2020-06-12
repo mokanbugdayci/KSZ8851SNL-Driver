@@ -1,5 +1,5 @@
-ksz8851.c:34:9:ksz8851_read_register	56	static
-ksz8851.c:81:9:ksz8851_write_register	40	static
-ksz8851.c:123:6:ksz8851_hard_reset	32	static
-ksz8851.c:140:9:ksz8851_soft_reset	16	static
-ksz8851.c:169:9:ksz8851_init	40	static
+ksz8851.c:42:9:ksz8851_read_register	56	static
+ksz8851.c:89:9:ksz8851_write_register	40	static
+ksz8851.c:131:6:ksz8851_hard_reset	32	static
+ksz8851.c:148:9:ksz8851_soft_reset	16	static
+ksz8851.c:177:9:ksz8851_init	40	static
